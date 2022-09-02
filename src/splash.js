@@ -1,13 +1,11 @@
 import Taps from './taps.jpg'
 import Pour from './pour.jpg'
+import Flight from './flight.jpg'
 
 export function aboutPage()   {
     const about = document.createElement('div')
     about.classList.add('aboutPage')
     
-    // const aboutImg1 = document.createElement('div')
-    // aboutImg1.classList.add('aboutImg')
-
     const header = document.createElement('div')
     const aboutRow1 = document.createElement('div')
     const aboutRow2 = document.createElement('div')
@@ -34,6 +32,8 @@ export function aboutPage()   {
     header.appendChild(missionHead)
     header.appendChild(missionDescript)
 
+///////////
+
     const row1PicContainer = document.createElement('div')
     row1PicContainer.classList.add('imgContainers')
     const row1Dscpt = document.createElement('div')
@@ -45,7 +45,7 @@ export function aboutPage()   {
     const row1DscptHead = document.createElement('h2')
     row1DscptHead.textContent = `Hobby Homebrewers Rejoice!`
     const row1DscptPara = document.createElement('p')
-    row1DscptPara.textContent = `Whether they are using an at home ale kit or run a microdistillery out of their parents garage, we give the local up and coming amateur brewers a chance to showcase their latest batches, for better or for worse.`
+    row1DscptPara.textContent = `Whether they are using an at home ale kit or run a microdistillery out of their parent's garage, we give the up and coming amateur brewers a chance to showcase their latest batches, for better or for worse.`
 
     row1Dscpt.appendChild(row1DscptHead)
     row1Dscpt.appendChild(row1DscptPara)
@@ -67,7 +67,7 @@ export function aboutPage()   {
     const row2DscptHead = document.createElement('h2')
     row2DscptHead.textContent = `Quantity over Quality`
     const row2DscptPara = document.createElement('p')
-    row2DscptPara.textContent = `We know Johnny with the beer kit he got from last Christmas won't create the next big double IPA, that's why we pull in brewers from around the state.  Someone's bound to have created something special.  Rule of large numbers!`
+    row2DscptPara.textContent = `We know Johnny with the beer kit he got from last Christmas won't create the next big double IPA, that's why we pull in brewers from around the state.  Someone is bound to have created something special.  Rule of large numbers!`
 
     row2Dscpt.appendChild(row2DscptHead)
     row2Dscpt.appendChild(row2DscptPara)
@@ -76,20 +76,38 @@ export function aboutPage()   {
     aboutRow2.appendChild(row2Dscpt)
     aboutRow2.appendChild(row2PicContainer)
 
-    // const imgContainer = document.createElement('div')
-    // about.appendChild(imgContainer)
-    
-    // const aboutImg1 = document.createElement('img')
-    // aboutImg1.src = AboutImg1
+/////////////
 
+    const row3PicContainer = document.createElement('div')
+    row3PicContainer.classList.add('imgContainers')
+    const row3Dscpt = document.createElement('div')
+    row3Dscpt.classList.add('dscrptContainers')
 
-    // imgContainer.appendChild(aboutImg1)
+    const row3Pic = document.createElement('img')
+    row3Pic.src = Flight
 
-    // const aboutDescrpt = document.createElement('div')
-    // aboutDescrpt.textContent = 'Place holder for About Page, YEYEYYE'
-    // aboutDescrpt.classList.add('aboutDescript')
+    const row3DscptHead = document.createElement('h2')
+    row3DscptHead.textContent = `Inebriated Beginnings`
+    const row3DscptPara = document.createElement('p')
+    row3DscptPara.textContent = `After a night of self hatred fueled binge drinking and an argumenet with a mustache wielding beer aficionado, the idea for the brew house was formed.  Organizing an initial launch proved challenging at first but as the vision came together, more and more brewers were eager to be a part of the project.  We opened our doors Fall 2018 and have been rockin' and rollin' ever since.`
 
-    // about.appendChild(aboutDescrpt)
+    row3Dscpt.appendChild(row3DscptHead)
+    row3Dscpt.appendChild(row3DscptPara)
+    row3PicContainer.appendChild(row3Pic)
+
+    aboutRow3.appendChild(row3PicContainer)
+    aboutRow3.appendChild(row3Dscpt)
+
+////////////
+
+    const footerHead = document.createElement('h1')
+    footerHead.textContent = 'Welcome All'
+
+    const footerDescript = document.createElement('p')
+    footerDescript.textContent = `Whether you are just beginning your journey into the world of craft beer or love to argue over the nuances between ales and lagers with strangers, come hang up your coat and try a few obscure beers with us!`
+
+    footer.appendChild(footerHead)
+    footer.appendChild(footerDescript)
 
     return about
 }

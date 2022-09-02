@@ -1,5 +1,8 @@
 import {aboutPage} from './splash.js'
+import {menu} from './menu.js'
 import './style.css'
+
+///////// Initial Page load.  Creates Hero and nav buttons //////////////
 
 const container = document.querySelector('#content')
 
@@ -46,5 +49,9 @@ navButtons.appendChild(contactBtn)
 reservation.appendChild(reservationBtn)
 
 content.appendChild(aboutPage())
+
+content.appendChild(menu())
+
+//////////
 
 console.log('Hello World!')
