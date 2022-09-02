@@ -1,4 +1,4 @@
-import {home} from './splash.js'
+import {aboutPage} from './splash.js'
 import './style.css'
 
 const container = document.querySelector('#content')
@@ -45,5 +45,6 @@ navButtons.appendChild(menuBtn)
 navButtons.appendChild(contactBtn)
 reservation.appendChild(reservationBtn)
 
+content.appendChild(aboutPage())
 
 console.log('Hello World!')

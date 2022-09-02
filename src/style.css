@@ -1,6 +1,19 @@
+:root{
+    --theme-bg-color: blanchedalmond;
+}
+
 *   {
     box-sizing: border-box;
     margin: 0;
+}
+
+
+#content    {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    background-color: var(--theme-bg-color);
 }
 
 button  {
@@ -52,5 +65,67 @@ button  {
 
 .nav-buttons    {
     display: flex;
+    gap: 1rem;
+}
+
+.aboutPage   {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    gap: 5rem;
+    font-size: 1.25rem;
+}
+
+.aboutImg   {
+    background: url(./about.jpg);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-size: cover;
+    box-shadow: 0 0 0 0 blanchedalmond inset, -50px 0 50px 8px blanchedalmond inset;
+}
+
+.aboutDescript   {
+    padding: 1rem;
+}
+
+.aboutHeader    {
+    flex:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.aboutPage>div>h1   {
+    text-align: center;
+}
+
+.aboutPage>div>p    {
+    width: min(50%, 500px);
+    text-align: center;
+}
+
+.rowContainers  {
+    display: flex;
+    gap: 5rem;
+    
+}
+
+img  {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.imgContainers  {
+    flex: 1 .25 50%;
+    min-width: 16rem;
+}
+
+.dscrptContainers   {
+    max-width: 36rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 1rem;
 }
