@@ -50,8 +50,18 @@ reservation.appendChild(reservationBtn)
 
 content.appendChild(aboutPage())
 
-content.appendChild(menu())
+////////// Event Listeners for NAV Buttons //////////////
 
-//////////
 
-console.log('Hello World!')
+aboutBtn.addEventListener('click', () => {
+    container.removeChild(container.lastChild)
+    container.appendChild(aboutPage())
+})
+
+menuBtn.addEventListener('click', () => {
+    container.removeChild(container.lastChild)
+    container.appendChild(menu())
+})
+
+
+
