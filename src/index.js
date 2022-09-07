@@ -1,6 +1,8 @@
 import {aboutPage} from './splash.js'
 import {menu} from './menu.js'
+import {contact} from './contact.js'
 import './style.css'
+import GitIcon from './git.png'
 
 ///////// Initial Page load.  Creates Hero and nav buttons //////////////
 
@@ -38,8 +40,8 @@ const menuBtn = document.createElement('button')
 const contactBtn = document.createElement('button')
 const reservationBtn = document.createElement('button')
 
-aboutBtn.textContent = 'About'
-menuBtn.textContent = 'Menu'
+aboutBtn.textContent = 'Home'
+menuBtn.textContent = 'Beers'
 contactBtn.textContent = 'Contact'
 reservationBtn.textContent = 'Reserve a Table'
 
@@ -48,20 +50,48 @@ navButtons.appendChild(menuBtn)
 navButtons.appendChild(contactBtn)
 reservation.appendChild(reservationBtn)
 
-content.appendChild(aboutPage())
+////////// Nav container - where our different pages load ///////////
+
+const navContainer = document.createElement('div')
+
+container.appendChild(navContainer)
+
+navContainer.appendChild(aboutPage())
+
+
+////////// footer //////////
+
+const footer = document.createElement('footer')
+footer.textContent = 'Created Sept 2022 by Applefrittr'
+
+const gitLink = document.createElement('a')
+gitLink.href = 'https://github.com/Applefrittr'
+
+const icon = document.createElement('img')
+icon.src = GitIcon
+
+gitLink.appendChild(icon)
+
+footer.appendChild(gitLink)
+
+container.appendChild(footer)
 
 ////////// Event Listeners for NAV Buttons //////////////
 
 
 aboutBtn.addEventListener('click', () => {
-    container.removeChild(container.lastChild)
-    container.appendChild(aboutPage())
+    navContainer.removeChild(navContainer.firstChild)
+    navContainer.appendChild(aboutPage())
 })
 
 menuBtn.addEventListener('click', () => {
-    container.removeChild(container.lastChild)
-    container.appendChild(menu())
+    navContainer.removeChild(navContainer.firstChild)
+    navContainer.appendChild(menu())
 })
 
+contactBtn.addEventListener('click', () => {
+    navContainer.removeChild(navContainer.firstChild)
+    navContainer.appendChild(contact())
+})
 
 

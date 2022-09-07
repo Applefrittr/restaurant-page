@@ -23,6 +23,8 @@ export function aboutPage()   {
     about.appendChild(footer)
     footer.classList.add('aboutHeader')
 
+/////////// Header ////////////////
+
     const missionHead = document.createElement('h1')
     missionHead.textContent = 'About Us'
 
@@ -32,7 +34,7 @@ export function aboutPage()   {
     header.appendChild(missionHead)
     header.appendChild(missionDescript)
 
-///////////
+/////////// Row 1 //////////////
 
     const row1PicContainer = document.createElement('div')
     row1PicContainer.classList.add('imgContainers')
@@ -54,7 +56,7 @@ export function aboutPage()   {
     aboutRow1.appendChild(row1PicContainer)
     aboutRow1.appendChild(row1Dscpt)
 
-////////////
+//////////// Row 2 ////////////////
 
     const row2PicContainer = document.createElement('div')
     row2PicContainer.classList.add('imgContainers')
@@ -76,7 +78,7 @@ export function aboutPage()   {
     aboutRow2.appendChild(row2Dscpt)
     aboutRow2.appendChild(row2PicContainer)
 
-/////////////
+///////////// Row 3 ////////////////
 
     const row3PicContainer = document.createElement('div')
     row3PicContainer.classList.add('imgContainers')
@@ -98,7 +100,7 @@ export function aboutPage()   {
     aboutRow3.appendChild(row3PicContainer)
     aboutRow3.appendChild(row3Dscpt)
 
-////////////
+//////////// Footer ///////////////
 
     const footerHead = document.createElement('h1')
     footerHead.textContent = 'Welcome All'
